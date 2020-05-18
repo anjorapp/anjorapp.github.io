@@ -37,7 +37,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: all 300ms ease out;
+  transition: 300ms all ease-out;
   opacity: 1;
 
   &.hidden {
