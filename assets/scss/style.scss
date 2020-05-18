@@ -20,6 +20,7 @@ $breakpoint-mobile: 767px;
 body {
   height: 100vh;
   overflow: hidden;
+  transition: 300ms all ease-out;
 
   &.loaded {
     height: inherit;
