@@ -1,11 +1,14 @@
-$(document).ready(function() {
+$(document).ready(function () {
+
+
   new WOW().init();
+
 
   $(this).scrollTop(0);
 
   sticky();
 
-  $(window).scroll(function() {
+  $(window).scroll(function () {
     sticky();
   });
 
@@ -19,13 +22,17 @@ $(document).ready(function() {
 
   var $root = $("html, body");
 
-  $('a[href^="#"]').click(function() {
-    $root.animate(
-      {
+  $('a[href^="#"]').click(function () {
+    $root.animate({
         scrollTop: $($.attr(this, "href")).offset().top
       },
       300
     );
     return false;
   });
+});
+
+$(window).on("load", function () {
+  $('.preloader').addClass('hidden')
+  $('body').addClass('loaded')
 });
