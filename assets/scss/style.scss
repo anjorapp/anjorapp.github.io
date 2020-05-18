@@ -46,7 +46,7 @@ body {
   }
 
   svg.tea {
-    --secondary: #33406f;
+    --secondary: $red;
 
     #teabag {
       transform-origin: top center;
