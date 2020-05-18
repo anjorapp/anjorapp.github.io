@@ -466,6 +466,12 @@ body {
 
 @media (max-width: $breakpoint-mobile) {
   .main-wrapper {
+    .head-banner {
+      .intro {
+        padding: 0 5%;
+      }
+    }
+
     .section {
       .single-col {
         .col {
