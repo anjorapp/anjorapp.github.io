@@ -333,6 +333,7 @@ body {
         border: 2px solid #fff;
         transition: $transition;
         pointer-events: auto;
+        text-align: center;
 
         i {
           transition: $transition;
@@ -469,6 +470,12 @@ body {
     .head-banner {
       .intro {
         padding: 0 5%;
+
+        a {
+          max-width: 164px;
+          display: flex;
+          align-items: center;
+        }
       }
     }
 
