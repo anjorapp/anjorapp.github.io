@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Footer Sample</title>
+      <style>
+         * {
+            margin: 0;
+            box-sizing: content-box;
+         }
+
+         a {
+            text-decoration: none;
+            color: black;
+         }
+
+         footer {
+            padding: 30px;
+            background: #f4f4f4;
+         }
+         footer .container {
+            width: 50%;
+            max-width: 50%;
+            margin: auto;
+            display: flex;
+            flex-wrap: wrap;
+         }
+         footer .menu {
+            width: 33%;
+            border: 1px solid black;
+         }
+         footer .menu ul {
+            list-style: none;
+            padding-left: 15px;
+            margin-bottom: 30px;
+         }
+         footer .menu ul li {
+            font-size: 16px;
+            padding-bottom: 10px;
+         }
+         footer .menu ul li:first-child {
+            font-weight: bold;
+            font-size: 20px;
+         }
+
+         .footer2 .container {
+            flex-direction: column;
+            flex-wrap: wrap;
+         }
+      </style>
+   </head>
+   <body>
+      <!-- footer 2 is the dynamic footer -->
+      <!-- you can set the number of rows per coolumn onn its parent data attribute-->
+      <!-- its width is also adjusting on its own -->
+
+      <!-- row direction -->
+      <footer class="footer1">
+         <div class="container">
+            <div class="menu">
+               <ul>
+                  <li>
+                     <a href="#">Sustainability</a>
+                  </li>
+                  <li>
+                     <a href="#">EVSA</a>
+                  </li>
+                  <li>
+                     <a href="#">EV Fleet Management</a>
+                  </li>
+                  <li>
+                     <a href="#">SmartCharge Rewards</a>
+                  </li>
+               </ul>
+            </div>
+            <div class="menu">
+               <ul>
+                  <li>
+                     <a href="#">Productivity</a>
+                  </li>
+                  <li>
+                     <a href="#">Benchmarking</a>
+                  </li>
+                  <li>
+                     <a href="#">Fleet fuel management with True Fuel&reg;</a>
+                  </li>
+                  <li>
+                     <a href="#">Route Planning</a>
+                  </li>
+               </ul>
+            </div>
+            <div class="menu">
+               <ul>
+                  <li>
+                     <a href="#">Mobile Mounting Solutions</a>
+                  </li>
+                  <li>
+                     <a href="#">GPS Lockbox</a>
+                  </li>
+                  <li>
+                     <a href="#">RAM&reg; Device Mounts</a>
+                  </li>
+                  <li>
+                     <a href="#">Asset Tracking</a>
+                  </li>
+                  <li>
+                     <a href="#">BeWhere</a>
+                  </li>
+                  <li>
+                     <a href="#">Digital Matter Asset Management</a>
+                  </li>
+                  <li>
+                     <a href="#">Fleet Management Software</a>
+                  </li>
+               </ul>
+            </div>
+            <div class="menu">
+               <ul>
+                  <li>
+                     <a href="#">Flexibility</a>
+                  </li>
+                  <li>
+                     <a href="#">Custom Software Integration</a>
+                  </li>
+                  <li>
+                     <a href="#">Installation</a>
+                  </li>
+               </ul>
+            </div>
+            <div class="menu">
+               <ul>
+                  <li>
+                     <a href="#">Safety</a>
+                  </li>
+                  <li>
+                     <a href="#">Safety Cloud by HAAS</a>
+                  </li>
+               </ul>
+            </div>
+         </div>
+      </footer>
+
+      <!-- column direction -->
+      <!-- rearranged menu items -->
+      <footer class="footer2">
+         <div class="container" data-rows="2">
+            <div class="menu">
+               <ul>
+                  <li>
+                     <a href="#">Sustainability</a>
+                  </li>
+                  <li>
+                     <a href="#">EVSA</a>
+                  </li>
+                  <li>
+                     <a href="#">EV Fleet Management</a>
+                  </li>
+                  <li>
+                     <a href="#">SmartCharge Rewards</a>
+                  </li>
+               </ul>
+            </div>
+            <div class="menu">
+               <ul>
+                  <li>
+                     <a href="#">Flexibility</a>
+                  </li>
+                  <li>
+                     <a href="#">Custom Software Integration</a>
+                  </li>
+                  <li>
+                     <a href="#">Installation</a>
+                  </li>
+               </ul>
+            </div>
+            <div class="menu">
+               <ul>
+                  <li>
+                     <a href="#">Productivity</a>
+                  </li>
+                  <li>
+                     <a href="#">Benchmarking</a>
+                  </li>
+                  <li>
+                     <a href="#">Fleet fuel management with True Fuel&reg;</a>
+                  </li>
+                  <li>
+                     <a href="#">Route Planning</a>
+                  </li>
+               </ul>
+            </div>
+            <div class="menu">
+               <ul>
+                  <li>
+                     <a href="#">Safety</a>
+                  </li>
+                  <li>
+                     <a href="#">Safety Cloud by HAAS</a>
+                  </li>
+               </ul>
+            </div>
+            <div class="menu">
+               <ul>
+                  <li>
+                     <a href="#">Mobile Mounting Solutions</a>
+                  </li>
+                  <li>
+                     <a href="#">GPS Lockbox</a>
+                  </li>
+                  <li>
+                     <a href="#">RAM&reg; Device Mounts</a>
+                  </li>
+                  <li>
+                     <a href="#">Asset Tracking</a>
+                  </li>
+                  <li>
+                     <a href="#">BeWhere</a>
+                  </li>
+                  <li>
+                     <a href="#">Digital Matter Asset Management</a>
+                  </li>
+                  <li>
+                     <a href="#">Fleet Management Software</a>
+                  </li>
+               </ul>
+            </div>
+         </div>
+      </footer>
+
+      <script>
+         function setRows() {
+            // getting the menu container
+            const menu = document.querySelector(".footer2 .container");
+
+            // getting the menu row count set by user
+            rowCount = parseInt(menu.dataset.rows);
+
+            // counting menu from container
+            menuItemCount = menu.querySelectorAll(".menu").length;
+
+            // height array of combined menu based on row count
+            menuHeights = [];
+
+            // i is the count variable
+            // temp is the count base on row count
+            // tempItem is the temporary height variable for combining menu heights
+            for (let i = 1, temp = 1, tempItem = 0; i <= menuItemCount; i++) {
+               // getting menu height
+               let item = menu.querySelector(".menu:nth-child(" + i + ")").offsetHeight;
+
+               // storing the first height on tempItem for combination
+               tempItem = tempItem + item;
+
+               // temporary row count increment
+               temp++;
+
+               // checking the temporary row count if equal to the exact row count
+               if (temp > rowCount) {
+                  // pushing the combined menu height into array
+                  menuHeights.push(tempItem);
+
+                  // reset row count back to 1
+                  temp = 1;
+
+                  // reset tempItem back into 0;
+                  tempItem = 0;
+               }
+            }
+
+            // getting the heights combined menu
+            maxHeight = Math.max.apply(null, menuHeights);
+            maxHeight = maxHeight + "px";
+            // console.log(maxHeight);
+
+            // setting menu containers height
+            menu.style.height = maxHeight;
+
+            // set column width
+            res = menuItemCount / rowCount;
+            res = Math.round(res);
+            columnWidth = 100 / res;
+
+            if (res < 2) {
+               columnWidth = 50;
+            }
+
+            if (menuItemCount == rowCount) {
+               columnWidth = 100;
+            }
+            columnWidth = columnWidth + "%";
+
+            for (let i = 1; i <= menuItemCount; i++) {
+               menu.querySelector(".menu:nth-child(" + i + ")").style.width = columnWidth;
+            }
+         }
+
+         setRows();
+      </script>
+   </body>
+</html>
