@@ -1,0 +1,174 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja-JP" xml:lang="ja-JP">
+<head>
+	<meta http-equiv="Content-Style-Type" content="text/css; charset=UTF-8" />
+	<link rel="stylesheet" href="style/pgcommon.css" charset="UTF-8" />
+
+	<title>[EntryExec]-PGマルチペイメントサービス−モジュールタイプ呼び出しサンプル</title>
+</head>
+<body>
+
+<div id="header">
+	<h1>Webmoney登録・クイック決済実行/モジュールタイプ(PHP) 呼び出しサンプル</h1>
+	<a href="index.html">インデックスに戻る</a>
+</div>
+
+<div id="main">
+	<?php
+		 if( !isset ($_POST['submit']) ){//初期表示です
+	?>
+	<form action="<?php echo $_SERVER['REQUEST_URI'] ?>" method="post">
+		<table>
+			<tbody>
+			<tr>
+				<th scope="row">ショップID(ShopID)</th>
+				<td><input name="ShopID" type="text" size="27" tabindex="16" /></td>
+			</tr>
+			<tr>
+				<th scope="row">ショップパスワード(ShopPass)</th>
+				<td><input name="ShopPass" type="text" size="27" tabindex="12" /></td>
+			</tr>
+			<tr>
+				<th scope="row">オーダーID(OrderID)</th>
+				<td><input name="OrderID" type="text" size="27" tabindex="19" /></td>
+			</tr>
+			<tr>
+				<th scope="row">利用金額(Amount)</th>
+				<td><input name="Amount" type="text" size="10" tabindex="14" class="num" /></td>
+			</tr>
+			<tr>
+				<th scope="row">税送料(Tax)</th>
+				<td><input name="Tax" type="text" size="10" tabindex="15" class="num" /></td>
+			</tr>
+			<tr>
+				<th scope="row">取引ID(AccessID)</th>
+				<td><input name="AccessID" type="text" size="27" tabindex="17" /></td>
+			</tr>
+			<tr>
+				<th scope="row">取引パスワード(AccessPass)</th>
+				<td><input name="AccessPass" type="text" size="27" tabindex="18" /></td>
+			</tr>
+			<tr>
+				<th scope="row">クイックID(QuickID)</th>
+				<td><input name="QuickID" type="text" size="27" tabindex="20" /></td>
+			</tr>
+			<tr>
+				<th scope="row">商品・サービス名(ItemName)</th>
+				<td><input name="ItemName" type="text" size="27" tabindex="21" /></td>
+			</tr>
+			<tr>
+				<th scope="row">支払期限日数(PaymentTermDay)</th>
+				<td><input name="PaymentTermDay" type="text" size="10" tabindex="22" class="num" /></td>
+			</tr>
+			<tr>
+				<th scope="row">リダイレクトURL(RedirectURL)</th>
+				<td><input name="RedirectURL" type="text" size="27" tabindex="23" /></td>
+			</tr>
+			<tr>
+				<th scope="row">加盟店自由項目1(ClientField1)</th>
+				<td><input name="ClientField1" type="text" size="27" tabindex="24" /></td>
+			</tr>
+			<tr>
+				<th scope="row">加盟店自由項目2(ClientField2)</th>
+				<td><input name="ClientField2" type="text" size="27" tabindex="25" /></td>
+			</tr>
+			<tr>
+				<th scope="row">加盟店自由項目3(ClientField3)</th>
+				<td><input name="ClientField3" type="text" size="27" tabindex="26" /></td>
+			</tr>
+			<tr>
+				<th scope="row">加盟店自由項目返却フラグ(ClientFieldFlag)</th>
+				<td><input name="ClientFieldFlag" type="text" size="27" tabindex="27" /></td>
+			</tr>
+
+			</tbody>
+		</table>
+		<input name="submit" type="submit" value="実行"  tabindex="52" />
+	</form>
+	<?php
+		}else{//送信結果の表示です
+	?>
+		<table>
+			<caption>実行結果</caption>
+			<tfoot>
+
+			</tfoot>
+			<tbody>
+				<tr>
+					<th scope="row">オーダーID(OrderId)</th>
+					<td><?php echo $output->getOrderId() ?></td>
+				</tr>
+				<tr>
+					<th scope="row">取引ID(AccessId)</th>
+					<td><?php echo $output->getAccessId() ?></td>
+				</tr>
+				<tr>
+					<th scope="row">取引パスワード(AccessPass)</th>
+					<td><?php echo $output->getAccessPass() ?></td>
+				</tr>
+				<tr>
+					<th scope="row">クイックID(QuickID)</th>
+					<td><?php echo $output->getQuickID() ?></td>
+				</tr>
+				<tr>
+					<th scope="row">現状態(Status)</th>
+					<td><?php echo $output->getStatus() ?></td>
+				</tr>
+				<tr>
+					<th scope="row">処理日時(TranDate)</th>
+					<td><?php echo $output->getTranDate() ?></td>
+				</tr>
+				<tr>
+					<th scope="row">キャンセル区分(PayCancel)</th>
+					<td><?php echo $output->getPayCancel() ?></td>
+				</tr>
+				<tr>
+					<th scope="row">管理番号(ManagementNo)</th>
+					<td><?php echo $output->getManagementNo() ?></td>
+				</tr>
+				<tr>
+					<th scope="row">決済コード(SettleCode)</th>
+					<td><?php echo $output->getSettleCode() ?></td>
+				</tr>
+				<tr>
+					<th scope="row">抽選結果表示ＵＲＬ(CampaignUrl)</th>
+					<td><?php echo $output->getCampaignUrl() ?></td>
+				</tr>
+				<tr>
+					<th scope="row">MD5ハッシュ(CheckString)</th>
+					<td><?php echo $output->getCheckString() ?></td>
+				</tr>
+				<tr>
+					<th scope="row">加盟店自由項目1(ClientField1)</th>
+					<td><?php echo htmlspecialchars( mb_convert_encoding( $output->getClientField1() , PGCARD_SAMPLE_ENCODING , 'SJIS') ) ?></td>
+				</tr>
+				<tr>
+					<th scope="row">加盟店自由項目2(ClientField2)</th>
+					<td><?php echo htmlspecialchars( mb_convert_encoding( $output->getClientField2() , PGCARD_SAMPLE_ENCODING , 'SJIS') ) ?></td>
+				</tr>
+				<tr>
+					<th scope="row">加盟店自由項目3(ClientField3)</th>
+					<td><?php echo htmlspecialchars( mb_convert_encoding( $output->getClientField3() , PGCARD_SAMPLE_ENCODING , 'SJIS') ) ?></td>
+				</tr>
+				<tr>
+					<th scope="row">次処理種別(NextStep)</th>
+					<td><?php echo $output->getNextStep() ?></td>
+				</tr>
+				<tr>
+					<th scope="row">支払期限日時(PaymentTerm)</th>
+					<td><?php echo $output->getPaymentTerm() ?></td>
+				</tr>
+			</tbody>
+		</table>
+	<?php
+		}//if( !isset ($_POST['submit']) )
+	?>
+</div>
+
+<div id="footer">
+	<em>Copyright (c) 2008 GMO Payment Gateway,Inc. All Rights Reserved.</em>
+</div>
+
+
+</body>
+</html>

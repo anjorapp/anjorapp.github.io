@@ -1,0 +1,109 @@
+@CHARSET "UTF-8";
+*{
+	padding: 0;
+	margin: 0;
+}
+body{
+	/*font-size:10pt;*/
+	font-size: small;
+	font-family: verdana;
+}
+h1{
+	font-size:180%;
+}
+div{
+	clear:both;
+}
+div#header{
+	height:50px;
+	padding-left:80px;
+	border-bottom-style: solid;
+	border-width:thin;
+	border-color:#aaaaaa;
+
+	background-image: url("./bk_head.jpg");
+	background-position:bottom;
+	background-repeat: repeat-x;
+}
+div#header a{
+	margin-left:40%;
+}
+div#main{
+	color:#0F0F0F;
+	background-color:#FFFFFF;
+	
+	margin-top:30px;
+	padding-bottom:20px;
+	padding-left:80px;
+	
+	min-height: 400px;
+	_height: 400px;
+	
+}
+div#footer{
+	height:50px;
+	padding-left:80px;
+	border-top-style: solid;
+	border-width:thin;
+	border-color:#aaaaaa;
+	background-image: url("./bk_foot.jpg");
+	background-position:top ;
+	background-repeat: repeat-x;
+}
+
+dl.divisional{
+	width:400px;
+	padding:20px;
+	border-style: solid;
+	background-color: #f8f8f8;
+	border-style:solid;
+	border-width:1px;
+	border-color: #aaaaaa;
+}
+dl.divisional{
+}
+dl.divisional dd{
+	margin-left: 20px;
+	margin-bottom: 10px;
+}		
+/* 入力フォームのテーブル */
+table{
+	padding:20px;
+	margin-bottom:20px;
+	border-style: solid;
+	background-color: #f8f8f8;
+	border-style:solid;
+	border-width:1px;
+	border-color: #aaaaaa;
+}
+table caption{
+	text-align: left;
+}
+table tbody{
+}
+table th{
+	font-weight: bold;
+	text-align: left;
+}
+table td{
+	padding:5px;
+	text-align: left;
+}
+table tfoot td{
+	text-align:right;
+}
+form input{
+	cursor:pointer;
+	font-size:105%;
+	font-family: monospace;
+}
+form select{
+	cursor:pointer;
+}
+form label{
+	cursor:pointer;
+}
+.num{
+	text-align: right;
+	padding-right: 2px;
+}

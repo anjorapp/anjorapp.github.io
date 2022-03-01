@@ -1,0 +1,754 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos  -->
+			<title>Docs For Class ExecFraudScreeningOutput</title>
+			<link rel="stylesheet" href="../../media/stylesheet.css" />
+						<script src="../../media/lib/classTree.js"></script>
+												<script language="javascript" type="text/javascript">
+				var imgPlus = new Image();
+				var imgMinus = new Image();
+				imgPlus.src = "../../media/images/plus.png";
+				imgMinus.src = "../../media/images/minus.png";
+				
+				function showNode(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+							var oImg = document.layers["img" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+							var oImg = document.all["img" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+							var oImg = document.getElementById("img" + Node);
+									break;
+							}
+					oImg.src = imgMinus.src;
+					oTable.style.display = "block";
+				}
+				
+				function hideNode(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+							var oImg = document.layers["img" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+							var oImg = document.all["img" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+							var oImg = document.getElementById("img" + Node);
+									break;
+							}
+					oImg.src = imgPlus.src;
+					oTable.style.display = "none";
+				}
+				
+				function nodeIsVisible(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+									break;
+							}
+					return (oTable && oTable.style.display == "block");
+				}
+				
+				function toggleNodeVisibility(Node){
+					if (nodeIsVisible(Node)){
+						hideNode(Node);
+					}else{
+						showNode(Node);
+					}
+				}
+			</script>
+					</head>
+		<body>
+			<div class="page-body">			
+<h2 class="class-name"><img src="../../media/images/Class_logo.png"
+														alt=" Class"
+														title=" Class"
+														style="vertical-align: middle"> ExecFraudScreeningOutput</h2>
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Description</div>
+	<div class="nav-bar">
+					<span class="disabled">Description</span> |
+															<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+						
+					</div>
+	<div class="info-box-body">
+        		<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description"><strong>不正防止実行　出力パラメータクラス</strong></p>
+	<ul class="tags">
+				<li><span class="field">author:</span> GMO PaymentGateway</li>
+				<li><span class="field">version:</span> 1.0</li>
+				<li><span class="field">see:</span> <a href="../../com-gmo_pg-client/output/_com---gmo_pg---client---output---outputPackageInfo.php.html">outputPackageInfo.php</a></li>
+			</ul>
+		<p class="notes">
+			Located in <a class="field" href="_com---gmo_pg---client---output---ExecFraudScreeningOutput.php.html">/com/gmo_pg/client/output/ExecFraudScreeningOutput.php</a> (line <span class="field">11</span>)
+		</p>
+		
+				
+		<pre><a href="../../com-gmo_pg-client/output/BaseOutput.html">BaseOutput</a>
+   |
+   --ExecFraudScreeningOutput</pre>
+	
+			</div>
+</div>
+
+
+
+
+	<a name="sec-method-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Method Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+												<span class="disabled">Methods</span> (<a href="#sec-methods">details</a>)
+		</div>
+		<div class="info-box-body">			
+			<div class="method-summary">
+																																																																																																																																															
+				<div class="method-definition">
+					<img src="../../media/images/Constructor.png" alt=" "/>
+											<span class="method-result">ExecFraudScreeningOutput</span>
+										<a href="#__construct" title="details" class="method-name">__construct</a>
+											([<span class="var-type"><a href="../../com-gmo_pg-client/common/IgnoreCaseMap.html">IgnoreCaseMap</a></span>&nbsp;<span class="var-name">$params</span> = <span class="var-default">null</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">string</span>
+										<a href="#getRedFraudRecId" title="details" class="method-name">getRedFraudRecId</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">string</span>
+										<a href="#getRedFraudRspCd" title="details" class="method-name">getRedFraudRspCd</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">string</span>
+										<a href="#getRedFraudRspMsg" title="details" class="method-name">getRedFraudRspMsg</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">string</span>
+										<a href="#getRedFraudStatCd" title="details" class="method-name">getRedFraudStatCd</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">string</span>
+										<a href="#getRedOrdId" title="details" class="method-name">getRedOrdId</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">string</span>
+										<a href="#getRedReqId" title="details" class="method-name">getRedReqId</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">string</span>
+										<a href="#getRedStatCd" title="details" class="method-name">getRedStatCd</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#setRedFraudRecId" title="details" class="method-name">setRedFraudRecId</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$redFraudRecId</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#setRedFraudRspCd" title="details" class="method-name">setRedFraudRspCd</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$redFraudRspCd</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#setRedFraudRspMsg" title="details" class="method-name">setRedFraudRspMsg</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$redFraudRspMsg</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#setRedFraudStatCd" title="details" class="method-name">setRedFraudStatCd</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$redFraudStatCd</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#setRedOrdId" title="details" class="method-name">setRedOrdId</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$redOrdId</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#setRedReqId" title="details" class="method-name">setRedReqId</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$redReqId</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#setRedStatCd" title="details" class="method-name">setRedStatCd</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$redStatCd</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">string</span>
+										<a href="#toString" title="details" class="method-name">toString</a>
+										()
+									</div>
+											</div>
+		</div>
+	</div>		
+
+	
+	<a name="sec-methods"></a>
+	<div class="info-box">
+		<div class="info-box-title">Methods</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+																<a href="#sec-method-summary">Methods</a> (<span class="disabled">details</span>)
+						
+		</div>
+		<div class="info-box-body">
+			<A NAME='method_detail'></A>
+<a name="method__construct" id="__construct"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Constructor.png" />
+		<span class="method-title">Constructor __construct</span> (line <span class="line-number">47</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">コンストラクタ</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">ExecFraudScreeningOutput</span>
+		<span class="method-name">
+			__construct
+		</span>
+					([<span class="var-type"><a href="../../com-gmo_pg-client/common/IgnoreCaseMap.html">IgnoreCaseMap</a></span>&nbsp;<span class="var-name">$params</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"><a href="../../com-gmo_pg-client/common/IgnoreCaseMap.html">IgnoreCaseMap</a></span>
+				<span class="var-name">$params</span><span class="var-description">: 出力パラメータ</span>			</li>
+				</ul>
+		
+			<hr class="separator" />
+		<div class="notes">Redefinition of:</div>
+		<dl>
+			<dt><a href="../../com-gmo_pg-client/output/BaseOutput.html#method__construct">BaseOutput::__construct()</a></dt>
+						<dd>コンストラクタ</dd>
+					</dl>
+			
+	</div>
+<a name="methodgetRedFraudRecId" id="getRedFraudRecId"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getRedFraudRecId</span> (line <span class="line-number">112</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">ReD Shield Transaction ID取得</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> ReD Shield Transaction ID</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			getRedFraudRecId
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetRedFraudRspCd" id="getRedFraudRspCd"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getRedFraudRspCd</span> (line <span class="line-number">98</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">ReD Shield Response Code取得</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> ReD Shield Response Code</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			getRedFraudRspCd
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetRedFraudRspMsg" id="getRedFraudRspMsg"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getRedFraudRspMsg</span> (line <span class="line-number">105</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">ReD Shield Response Message取得</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> ReD Shield Response Message</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			getRedFraudRspMsg
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetRedFraudStatCd" id="getRedFraudStatCd"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getRedFraudStatCd</span> (line <span class="line-number">91</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">ReD Shield Status Code取得</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> ReD Shield Status Code</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			getRedFraudStatCd
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetRedOrdId" id="getRedOrdId"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getRedOrdId</span> (line <span class="line-number">77</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Order/TransactionID取得</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Order/TransactionID</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			getRedOrdId
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetRedReqId" id="getRedReqId"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getRedReqId</span> (line <span class="line-number">70</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">ReD Request ID取得</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> ReD Request ID</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			getRedReqId
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetRedStatCd" id="getRedStatCd"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getRedStatCd</span> (line <span class="line-number">84</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Status code取得</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Status code</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			getRedStatCd
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodsetRedFraudRecId" id="setRedFraudRecId"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">setRedFraudRecId</span> (line <span class="line-number">169</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">ReD Shield Transaction ID設定</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			setRedFraudRecId
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$redFraudRecId</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$redFraudRecId</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetRedFraudRspCd" id="setRedFraudRspCd"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">setRedFraudRspCd</span> (line <span class="line-number">153</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">ReD Shield Response Code設定</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			setRedFraudRspCd
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$redFraudRspCd</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$redFraudRspCd</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetRedFraudRspMsg" id="setRedFraudRspMsg"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">setRedFraudRspMsg</span> (line <span class="line-number">161</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">ReD Shield Response Message設定</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			setRedFraudRspMsg
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$redFraudRspMsg</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$redFraudRspMsg</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetRedFraudStatCd" id="setRedFraudStatCd"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">setRedFraudStatCd</span> (line <span class="line-number">145</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">ReD Shield Status Code設定</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			setRedFraudStatCd
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$redFraudStatCd</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$redFraudStatCd</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetRedOrdId" id="setRedOrdId"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">setRedOrdId</span> (line <span class="line-number">129</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Order/TransactionID設定</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			setRedOrdId
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$redOrdId</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$redOrdId</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetRedReqId" id="setRedReqId"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">setRedReqId</span> (line <span class="line-number">121</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">ReD Request ID設定</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			setRedReqId
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$redReqId</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$redReqId</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetRedStatCd" id="setRedStatCd"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">setRedStatCd</span> (line <span class="line-number">137</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Status code設定</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			setRedStatCd
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$redStatCd</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$redStatCd</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodtoString" id="toString"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">toString</span> (line <span class="line-number">180</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">文字列表現</p>
+<p class="description"><p>現在の各パラメータを、パラメータ名=値&amp;パラメータ名=値の形式で取得します。</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> 出力パラメータの文字列表現</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			toString
+		</span>
+				()
+			</div>
+	
+		
+			<hr class="separator" />
+		<div class="notes">Redefinition of:</div>
+		<dl>
+			<dt><a href="../../com-gmo_pg-client/output/BaseOutput.html#methodtoString">BaseOutput::toString()</a></dt>
+						<dd>文字列表現</dd>
+					</dl>
+			
+	</div>
+							<h4>Inherited Methods</h4>
+				<a name='inherited_methods'><!-- --></a>	
+									<!-- =========== Summary =========== -->
+					<p>Inherited From <span class="classname"><a href="../../com-gmo_pg-client/output/BaseOutput.html">BaseOutput</a></span></p>
+					<blockquote>
+													<img src="../../media/images/Constructor.png" alt=" "/>
+							<span class="method-name"><a href="../../com-gmo_pg-client/output/BaseOutput.html#method__construct">BaseOutput::__construct()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../com-gmo_pg-client/output/BaseOutput.html#methodencodeStr">BaseOutput::encodeStr()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../com-gmo_pg-client/output/BaseOutput.html#methodgetCsvResponse">BaseOutput::getCsvResponse()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../com-gmo_pg-client/output/BaseOutput.html#methodgetErrList">BaseOutput::getErrList()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../com-gmo_pg-client/output/BaseOutput.html#methodisErrorOccurred">BaseOutput::isErrorOccurred()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../com-gmo_pg-client/output/BaseOutput.html#methodnullToEmpty">BaseOutput::nullToEmpty()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../com-gmo_pg-client/output/BaseOutput.html#methodsetCsvResponse">BaseOutput::setCsvResponse()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../com-gmo_pg-client/output/BaseOutput.html#methodsetErrList">BaseOutput::setErrList()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../com-gmo_pg-client/output/BaseOutput.html#methodtoString">BaseOutput::toString()</a></span><br>
+											</blockquote>
+										
+		</div>
+	</div>
+
+	
+	<p class="notes" id="credit">
+		Documentation generated on Tue, 10 Jul 2018 09:56:01 +0900 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.3</a>
+	</p>
+	</div></body>
+</html>

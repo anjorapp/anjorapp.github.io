@@ -1,0 +1,367 @@
+/*==================Large Display==============*/
+@media only screen and (min-width: 992px) and (max-width: 1199px){
+    .container{
+        width: 970px;
+    }
+    .feature-area {
+        padding-bottom: 79px;
+    }
+    .single-feature-item {
+        padding-bottom: 10px;
+    }
+    .single-service-item {
+        padding: 20px 10px;
+    }
+    .member-social-link a i {
+        margin-right: 0;
+    }
+    .member-info {
+        top: 83%;
+    }
+    .overview-content {
+        padding-top: 0;
+        padding-left: 15px;
+    }
+    .overview-content h3 {
+        font-size: 23px;
+        line-height: 30px;
+        padding-bottom: 10px;
+    }
+    .overview-content p {
+        padding-bottom: 26px;
+    }
+    blockquote {
+        padding: 0 10px 0 20px;
+    }
+    .ceo-signature {
+        padding-top: 0;
+        padding-right: 10px;
+    }
+    
+}
+/*==================Medium Display==============*/
+@media only screen and (min-width: 768px) and (max-width: 991px){
+    .container{
+        width: 750px;
+    }
+    h1 {
+        font-size: 58px;
+        line-height: 75px;
+    }
+    .logo p {
+        font-size: 28px;
+    }
+    .navbar-nav > li {
+        padding: 0 15px;
+    }
+    .about-img {
+        margin-bottom: 30px;
+    }
+    .feature-area {
+        padding-bottom: 100px;
+    }
+    .single-feature-item {
+        width: 50%;
+        float: left;
+    }
+    .pricing-area {
+        padding-bottom: 68px;
+    }
+    .pricing-table {
+        margin-bottom: 30px;
+    }
+    .expertise-img {
+        margin-top: 50px;
+    }
+    .member-social-link a i {
+        margin-right: 0;
+    }
+    .video-sec h3 {
+        font-size: 25px;
+    }
+    .overview-content {
+        padding-left: 0;
+        padding-top: 40px;
+        text-align: center;
+    }
+    .overview-content h3 {
+        font-size: 22px;
+        line-height: 30px;
+        padding-bottom: 10px;
+    }
+    .overview-content p {
+        padding-bottom: 20px;
+    }
+    .ceo-img {
+        padding-top: 40px;
+    }
+    .post-by > a {
+        margin-right: 10px;
+    }
+    .post-date {
+        margin-right: 5px;
+    }
+    .contact-info > h3 {
+        font-size: 14px;
+    }
+    .recent-post li {
+        margin-right: 50px;
+    }
+    .post-head h3 a {
+        font-size: 20px;
+    }
+    .quote {
+        padding: 0 10px;
+    }
+}
+
+/*============ Tab Display==============*/
+@media only screen and (max-width: 767px){
+    .container{
+        width: 450px;
+    }
+    .logo p{
+        line-height: 55px;
+    }
+    header.header-area.sticky .logo {
+        padding-top: 8px;
+    }
+    .navbar-toggle {
+        margin-top: -44px;
+        margin-right: 0;
+        cursor: pointer;
+        padding-right: 0;
+    }
+    .navbar{
+        min-height: 0;
+    }
+    .nav.navbar-nav.navbar-right > li {
+        background: #fff;
+        border-bottom: 1px solid #ddd;
+    }
+    .navbar-nav > li {
+        display: block;
+        margin-right: 0;
+        padding: 0;
+    }
+    .nav.navbar-nav.navbar-right > li:last-child{
+        border-bottom: 1px solid transparent;
+    }
+    .main-menu .navbar-nav > li > a {
+        color: #333;
+        line-height: 50px;
+        padding-left: 10px;
+    }
+    header.sticky .header-area .navbar-nav > li {
+        padding-left: 0;
+    }
+    .sticky .main-menu .navbar-nav > li > a {
+        color: #333;
+        line-height: 50px;
+    }
+    .sticky .main-menu .navbar-nav > li > a:after {
+       display: none;
+    }
+    .sticky .main-menu .navbar-nav > li.active a:after {
+        display: none;
+    }
+    .navbar-collapse {
+        box-shadow: none;
+    }
+}
+
+/*=============Medium Mobile Screen==============*/
+@media only screen and (min-width: 480px) and (max-width: 767px){
+    h1 {
+        font-size: 35px;
+        line-height: 50px;
+    }
+    h5 {
+        font-size: 18px;
+    }
+    .about-img {
+        margin-bottom: 30px;
+    }
+    .feature-area {
+        padding-bottom: 100px;
+    }
+    .feature-content {
+        margin-top: 30px;
+        padding-left: 0;
+    }
+    .facts-area {
+        padding-bottom: 65px;
+    }
+    .single-facts-item {
+        margin-bottom: 30px;
+    }
+    .pricing-area {
+        padding-bottom: 68px;
+    }
+    .pricing-table {
+        margin-bottom: 30px;
+    }
+    .single-expertise-item {
+        align-items: center;
+    }
+    .expertise-content {
+        padding: 0 30px;
+        text-align: center;
+    }
+    .expertise-img img {
+        margin-top: 30px;
+    }
+    .btn5 {
+        width: 100%;
+        text-align: center;
+    }
+    .member-social-link a i {
+        margin-right: 0;
+    }
+    .member-info {
+        top: 87%;
+    }
+    .video-sec h3 {
+        bottom: 36%;
+        font-size: 22px;
+    }
+    .overview-content {
+        padding-left: 0;
+        margin-top: 40px;
+        text-align: center;
+    }
+    .ceo-img {
+        padding-top: 40px;
+    }
+    blockquote {
+        padding: 0 0 0 20px;
+    }
+    .ceo-signature {
+        padding-top: 10px;
+        padding-right: 0;
+    }
+    .blog-area {
+        padding-bottom: 63px;
+    }
+    .single-post-item {
+        margin-bottom: 40px;
+    }
+    .contact-info {
+        margin-top: 50px;
+        padding-left: 0;
+    }
+    .post-head h3 a {
+        font-size: 17px;
+    }
+    .quote {
+        padding: 0 10px;
+    }
+}
+
+/*============Small Mobile Display==============*/
+@media only screen and (min-width: 300px) and (max-width: 479px) {
+    .container {
+        width: 300px;
+    }
+    h1 {
+        font-size: 22px;
+        line-height: 50px;
+    }
+    h2{
+        font-size: 35px;
+    }
+    h5 {
+        font-size: 16px;
+    }
+    .slider-title span {
+        font-size: 16px;
+    }
+    .about-img {
+        margin-bottom: 40px;
+    }
+    .single-about-item{
+        margin-bottom: 30px;
+    }
+    .feature-area {
+        padding-bottom: 100px;
+    }
+    .feature-content {
+        padding-right: 0;
+    }
+    .single-service-item {
+        padding: 20px 15px;
+    }
+    .facts-area {
+        padding-bottom: 65px;
+    }
+    .single-facts-item {
+        margin-bottom: 30px;
+    }
+    .portfolio-menu li {
+        margin-right: 5px;
+    }
+    .pricing-area {
+        padding-bottom: 68px;
+    }
+    .pricing-table {
+        margin-bottom: 30px;
+    }
+    .single-expertise-item {
+        align-items: center;
+    }
+    .expertise-content {
+        padding: 0;
+        text-align: center;
+    }
+    .expertise-img img {
+        margin-top: 30px;
+    }
+    .btn5 {
+        width: 100%;
+        text-align: center;
+    }
+    .video-sec h3 {
+        bottom: 29%;
+        font-size: 16px;
+    }
+    .overview-content {
+        padding-left: 0;
+        margin-top: 40px;
+        text-align: center;
+    }
+    .overview-content h3 {
+        font-size: 20px;
+        line-height: 30px;
+    }
+    blockquote {
+        padding: 0 0 0 20px;
+    }
+    .ceo-signature {
+        padding-top: 10px;
+        padding-right: 0;
+    }
+    .ceo-img {
+        padding-top: 40px;
+    }
+    .blog-area {
+        padding-bottom: 63px;
+    }
+    .single-post-item {
+        margin-bottom: 40px;
+    }
+    .contact-info {
+        margin-top: 50px;
+        padding-left: 0;
+    }
+    .post-head h3 a {
+        font-size: 16px;
+    }
+    .entry-meta > a {
+        font-size: 13px;
+        padding-left: 0;
+        padding-right: 3px;
+    }
+    .quote {
+        padding: 0;
+    }
+}
