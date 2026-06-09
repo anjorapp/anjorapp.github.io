@@ -71,7 +71,7 @@ body {
 /* scroll indicator */
 .scroll-hint {
   position: absolute;
-  bottom: 0rem;
+  bottom: 1rem;
   left: 50%;
   transform: translateX(-50%);
   display: flex;
