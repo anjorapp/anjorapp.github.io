@@ -4,8 +4,8 @@ export default function Home() {
   return (
     <>
       <div className="hero-banner relative w-full h-screen flex items-center justify-center">
-        <div id="pt" className="canvas -z-0"></div>
-        <div className="z-10 flex flex-col items-center justify-center">
+        <div id="pt" className="canvas -z-10"></div>
+        <div className="flex flex-col items-center justify-center">
           <span className="font-mono text-sm text-primary">// portfolio v2.0</span>
           <h1 className="text-9xl font-bold font-display text-primary-bright">
             Anjorapp

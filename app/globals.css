@@ -1,26 +1,113 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #0d1117;
+  --foreground: #e6edf3;
+  --primary: #c0392b;
+  --primary-bright: #e74c3c;
+  --primary-dim: #7f1f15;
+  --secondary: #161b22;
+  --secondary-2: #1c2330;
+  --muted: #8b949e;
+  --border: rgba(255, 255, 255, 0.07);
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-primary: var(--primary);
+  --color-primary-bright: var(--primary-bright);
+  --color-primary-dim: var(--primary-dim);
+  --color-secondary: var(--secondary);
+  --color-secondary-2: var(--secondary-2);
+  --color-muted: var(--muted);
+  --color-border: var(--border);
+  --font-display: var(--font-bebas-neue);
+  --font-ui: var(--font-rajdhani);
+  --font-mono: var(--font-dm-mono);
+  --font-weight-bold: 500;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+* {
+  @apply box-border;
+}
+
+html {
+  @apply scroll-smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  @apply bg-background text-foreground overflow-x-hidden;
+  font-family: var(--font-ui);
+  font-size: 16px;
+}
+
+
+/* ── CURSOR BLINK ── */
+.cursor {
+  @apply inline-block align-middle bg-primary-bright w-[2px] h-[1em] ml-[2px];
+  animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+}
+
+
+.canvas {
+  @apply absolute inset-0 w-full h-full;
+  background: url("/img/filler.png") center center / cover;
+}
+
+
+/* scroll indicator */
+.scroll-hint {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  opacity: 1;
+  animation: fadeUp 1s 1.5s ease both;
+
+  span {
+    font-family: var(--font-mono);
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    color: var(--text-muted);
+    text-transform: uppercase;
+  }
+
+  .scroll-line {
+    width: 2px;
+    height: 40px;
+    background: linear-gradient(180deg, var(--primary-bright) 0%, transparent 100%);
+    display: block;
+    animation: scrollPulse 2s ease-in-out infinite;
+  }
+}
+
+@keyframes scrollPulse {
+
+  0%,
+  100% {
+    opacity: 0.4;
+    transform: scaleY(1);
+  }
+
+  50% {
+    opacity: 1;
+    transform: scaleY(1.2);
+  }
 }

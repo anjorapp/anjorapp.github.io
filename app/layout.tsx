@@ -1,15 +1,27 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Bebas_Neue, Rajdhani, DM_Mono } from "next/font/google";
 import "./globals.css";
+import Nav from "./components/Nav";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const bebasNeue = Bebas_Neue({
+  weight: ["400"],
+  style: ["normal"],
   subsets: ["latin"],
+  variable: "--font-bebas-neue",
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const rajdhani = Rajdhani({
+  weight: ["300", "400", "500", "600", "700"],
+  style: ["normal"],
   subsets: ["latin"],
+  variable: "--font-rajdhani",
+});
+
+const dmMono = DM_Mono({
+  weight: ["300", "400", "500"],
+  style: ["normal", "italic"],
+  subsets: ["latin"],
+  variable: "--font-dm-mono",
 });
 
 export const metadata: Metadata = {
@@ -25,9 +37,12 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      className={`${bebasNeue.variable} ${rajdhani.variable} ${dmMono.variable}`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
-    </html>
+      <body className="min-h-full flex flex-col bg-background text-foreground">
+        <Nav />
+        {children}
+      </body>
+    </html >
   );
 }
