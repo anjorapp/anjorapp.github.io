@@ -2,7 +2,7 @@ var ptColor1 = "#FF3F8E";
 var ptColor2 = "#04C2C9";
 var ptColor3 = "#2E55C1";
 
-var canvasBg = "#252934";
+var canvasBg = "#0d1117";
 
 var space;
 

@@ -32,7 +32,7 @@ export default function Home() {
         </div>
       </div >
 
-      <Script src="/lib/pt.js" strategy="beforeInteractive" />
+      <Script src="/lib/pt.min.js" strategy="beforeInteractive" />
       <Script src="/lib/canvas.js" strategy="afterInteractive" />
     </>
   );
