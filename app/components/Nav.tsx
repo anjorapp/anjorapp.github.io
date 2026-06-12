@@ -13,8 +13,8 @@ export default function Nav() {
     const [open, setOpen] = useState(false);
 
     return (
-        <div className="fixed top-0 left-0 z-50 w-full  border-b border-border backdrop-blur-[5px] bg-background/75">
-            <nav className="max-w-4xl mx-auto w-full flex items-center justify-between px-6 md:px-12 h-14">
+        <div className="fixed top-0 left-0 z-50 w-full border-b border-border backdrop-blur-[10px] bg-background/75">
+            <nav className="container flex items-center justify-between h-14">
 
                 {/* Logo */}
                 <a href="/" className="font-mono text-primary-bright tracking-wide text-[13px]">

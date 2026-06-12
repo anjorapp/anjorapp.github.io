@@ -42,6 +42,20 @@ body {
   font-size: 16px;
 }
 
+h1,
+h2,
+h3,
+h4 {
+  @apply font-bold font-display;
+}
+
+.subtitle {
+  @apply font-mono tracking-widest text-xs text-primary-bright;
+}
+
+.container {
+  @apply mx-auto px-4 max-w-6xl;
+}
 
 /* ── CURSOR BLINK ── */
 .cursor {
@@ -109,5 +123,22 @@ body {
   50% {
     opacity: 1;
     transform: scaleY(1.2);
+  }
+}
+
+.hexagon {
+  @apply w-[57.734px] h-[100px] relative m-auto flex items-center justify-center;
+
+  span {
+    @apply text-5xl z-[2];
+  }
+
+  &::before,
+  &::after {
+    @apply bg-inherit w-full h-full absolute top-0 bottom-0 left-0 right-0 m-auto rotate-60 content-[''] z-[1];
+  }
+
+  &::after {
+    @apply -rotate-60;
   }
 }
