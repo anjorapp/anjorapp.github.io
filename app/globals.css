@@ -38,9 +38,8 @@ html {
 }
 
 body {
-  @apply bg-background text-foreground font-ui;
+  @apply bg-background text-foreground font-ui w-full max-w-full overflow-x-hidden;
   font-size: 16px;
-  overflow-x: hidden;
 }
 
 h1,
@@ -160,4 +159,9 @@ h4 {
       @apply lg:col-span-2 lg:row-span-2 lg:aspect-auto lg:h-full;
     }
   }
+}
+
+[data-aos] {
+  position: relative;
+  will-change: transform;
 }

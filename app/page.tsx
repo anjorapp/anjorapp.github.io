@@ -312,7 +312,7 @@ export default function Home() {
 
       <div className="section-divider"></div>
 
-      <section id="about" className="py-16 scroll-mt-[56px]">
+      <section id="about" className="py-16 scroll-mt-[56px] w-full overflow-hidden">
         <div data-aos="fade-up" className="container">
           <h2 className="text-5xl sm:text-6xl tracking-wider flex flex-col mb-4">
             <span aria-hidden className="subtitle uppercase">
@@ -362,7 +362,7 @@ export default function Home() {
 
               <div data-aos="fade-left" className="flex flex-col p-6 border-1 border-secondary-2 bg-secondary relative before:content-[''] before:absolute before:top-0 before:left-0 before:w-[3px] before:h-full before:bg-primary">
                 <span className="font-display text-5xl">
-                  ∞
+                  <span className="mdi mdi-infinity"></span>
                 </span>
                 <span className="subtitle !text-muted">
                   Cups of coffee
