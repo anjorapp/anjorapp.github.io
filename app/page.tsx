@@ -1,11 +1,12 @@
 'use client';
 import Script from "next/script";
 import '@mdi/font/css/materialdesignicons.min.css';
-import { useEffect } from "react";
+import { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Parallax } from "react-scroll-parallax";
 import Marquee from "react-fast-marquee";
+import emailjs from "@emailjs/browser";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -38,6 +39,43 @@ export default function Home() {
       );
     });
   }, []);
+
+  // email js
+
+  const formRef = useRef<HTMLFormElement>(null);
+
+  const [status, setStatus] = useState<null | "success" | "error">(null);
+
+  // ✅ PUT IT HERE (inside component, before return)
+  useEffect(() => {
+    if (!status) return;
+
+    const timer = setTimeout(() => {
+      setStatus(null);
+    }, 20000);
+
+    return () => clearTimeout(timer);
+  }, [status]);
+
+  const sendEmail = (e: React.FormEvent) => {
+    e.preventDefault();
+
+    if (!formRef.current) return;
+
+    emailjs
+      .sendForm(
+        "service_3r71pzr",
+        "template_mx0ftgj",
+        formRef.current,
+        "Yy4ay91jIRcPocH_y"
+      )
+      .then(
+        () => setStatus("success"),
+        () => setStatus("error")
+      );
+  };
+
+
 
   const skills = [
     {
@@ -444,32 +482,49 @@ export default function Home() {
             Have a project in mind? Want to collaborate or just say hi? My inbox is always open.
           </p>
           <div className="pt-8 grid grid-cols-1 md:grid-cols-2 gap-16">
-            <form action="" className="flex flex-col gap-4">
+            <form ref={formRef} onSubmit={sendEmail} className="flex flex-col gap-4">
               <div className="form-group flex flex-col gap-1">
                 <label htmlFor="name" className="uppercase tracking-widest">
-                  Name
+                  Name<span className="text-primary-bright">*</span>
                 </label>
-                <input id="name" name="name" type="text" placeholder="John Doe"
+                <input id="name" name="name" type="text" placeholder="John Doe" required
                   className="bg-secondary-2 border border-1 border-border focus:border-primary-dim outline-none px-4 py-3 transition-colors duration-200" />
               </div>
 
               <div className="form-group flex flex-col gap-1">
                 <label htmlFor="email" className="uppercase tracking-widest">
-                  Email
+                  Email<span className="text-primary-bright">*</span>
                 </label>
-                <input id="email" name="email" type="email" placeholder="johndoe@email.com"
+                <input id="email" name="email" type="email" placeholder="johndoe@email.com" required
                   className="bg-secondary-2 border border-1 border-border focus:border-primary-dim outline-none px-4 py-3 transition-colors duration-200" />
               </div>
 
               <div className="form-group flex flex-col gap-1">
                 <label htmlFor="name" className="uppercase tracking-widest">
-                  Message
+                  Message<span className="text-primary-bright">*</span>
                 </label>
-                <textarea id="message" name="message" placeholder="Tell me about your project"
+                <textarea id="message" name="message" placeholder="Tell me about your project" required
                   className="min-h-[120px] bg-secondary-2 border border-1 border-border focus:border-primary-dim outline-none px-4 py-3 transition-colors duration-200"></textarea>
               </div>
-
               <button className="form-submit [clip-path:polygon(8px_0%,100%_0%,calc(100%_-_8px)_100%,0%_100%)] px-8 py-3 self-start bg-primary/80 text-foreground hover:bg-primary border-none font-bold tracking-widest uppercase cursor-pointer transition-colors duration-200" type="submit">Send Message ›</button>
+              {status && (
+                <div
+                  className={`rounded-md px-6 py-3 text-md text-center self-start flex items-center gap-2 ${status === "success" ? "bg-green-700" : "bg-red-700"
+                    }`}
+                >
+                  {status === "success" ? (
+                    <>
+                      <span className="mdi mdi-check-circle text-lg"></span>
+                      Message sent successfully!
+                    </>
+                  ) : (
+                    <>
+                      <span className="mdi mdi-close-circle text-lg"></span>
+                      Failed to send message
+                    </>
+                  )}
+                </div>
+              )}
             </form>
             <div className="flex flex-col gap-8 justify-start items-start">
 
@@ -515,7 +570,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </section>
+      </section >
     </>
   );
 }
