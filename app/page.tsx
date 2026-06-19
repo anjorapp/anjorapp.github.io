@@ -326,7 +326,7 @@ export default function Home() {
                 I'm Anjo Ralph Mingo — a full stack web developer with a passion for building fast, beautiful, and functional digital experiences. From custom WordPress themes to modern JavaScript frontends, I care about the craft.
               </p>
               <p className="mb-4">
-                Based in Calbayog, Philippines, I work with startups and businesses to turn ideas into polished products. Every pixel matters. Every millisecond counts.
+                Based in Samar, Philippines, I work with startups and businesses to turn ideas into polished products. Every pixel matters. Every millisecond counts.
               </p>
               <p className="">
                 When I'm not writing code, I'm studying design systems, experimenting with new frameworks, and leveling up my skills — because the web never stops evolving.
