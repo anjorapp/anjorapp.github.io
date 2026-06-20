@@ -26,7 +26,7 @@ export default function Nav() {
     }, []);
 
     return (
-        <div className="fixed top-0 left-0 z-50 w-full border-b border-border backdrop-blur-[10px] bg-background/75">
+        <div className="fixed top-0 left-0 z-50 w-full border-b border-border backdrop-blur-sm bg-background/75">
             <nav className="container flex items-center justify-between h-14">
 
                 {/* Logo */}

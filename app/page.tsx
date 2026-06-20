@@ -41,12 +41,8 @@ export default function Home() {
   }, []);
 
   // email js
-
   const formRef = useRef<HTMLFormElement>(null);
-
   const [status, setStatus] = useState<null | "success" | "error">(null);
-
-  // ✅ PUT IT HERE (inside component, before return)
   useEffect(() => {
     if (!status) return;
 
@@ -74,6 +70,7 @@ export default function Home() {
         () => setStatus("error")
       );
   };
+
 
 
 
@@ -268,12 +265,12 @@ export default function Home() {
             Full-Stack Web Developer
           </p>
           <div className="flex gap-6 mt-4 font-ui uppercase font-medium tracking-widest">
-            <a data-aos="fade-right" href="#projects" className="flex justify-center items-center">
-              <span className="[clip-path:polygon(8px_0%,100%_0%,calc(100%_-_8px)_100%,0%_100%)] bg-primary/75 text-foreground hover:bg-primary px-6 py-3 transition-colors duration-200 leading-none">
+            <a data-aos="fade-right" href="#projects" className="outline-none flex justify-center items-center">
+              <span className="btn [clip-path:polygon(8px_0%,100%_0%,calc(100%_-_8px)_100%,0%_100%)] bg-primary/75 text-foreground hover:bg-primary px-6 py-3 transition-colors duration-200 leading-none">
                 View my work
               </span>
             </a>
-            <a data-aos="fade-left" href="#contact" className="flex justify-center items-center">
+            <a data-aos="fade-left" href="#contact" className="outline-none flex justify-center items-center">
               <span className="[clip-path:polygon(8px_0%,100%_0%,calc(100%_-_8px)_100%,0%_100%)] bg-foreground/75 text-background hover:bg-foreground px-6 py-3 transition-colors duration-200 leading-none">
                 Get in Touch
               </span>
@@ -506,25 +503,7 @@ export default function Home() {
                 <textarea id="message" name="message" placeholder="Tell me about your project" required
                   className="min-h-[120px] bg-secondary-2 border border-1 border-border focus:border-primary-dim outline-none px-4 py-3 transition-colors duration-200"></textarea>
               </div>
-              <button className="form-submit [clip-path:polygon(8px_0%,100%_0%,calc(100%_-_8px)_100%,0%_100%)] px-8 py-3 self-start bg-primary/80 text-foreground hover:bg-primary border-none font-bold tracking-widest uppercase cursor-pointer transition-colors duration-200" type="submit">Send Message ›</button>
-              {status && (
-                <div
-                  className={`rounded-md px-6 py-3 text-md text-center self-start flex items-center gap-2 ${status === "success" ? "bg-green-700" : "bg-red-700"
-                    }`}
-                >
-                  {status === "success" ? (
-                    <>
-                      <span className="mdi mdi-check-circle text-lg"></span>
-                      Message sent successfully!
-                    </>
-                  ) : (
-                    <>
-                      <span className="mdi mdi-close-circle text-lg"></span>
-                      Failed to send message
-                    </>
-                  )}
-                </div>
-              )}
+              <button className="form-submit outline-none [clip-path:polygon(8px_0%,100%_0%,calc(100%_-_8px)_100%,0%_100%)] px-8 py-3 self-start bg-primary/80 text-foreground hover:bg-primary focus:bg-primary border-none font-bold tracking-widest uppercase cursor-pointer transition-colors duration-200" type="submit">Send Message ›</button>
             </form>
             <div className="flex flex-col gap-8 justify-start items-start">
 
@@ -570,7 +549,26 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </section >
+      </section>
+
+      {status && (
+        <div
+          className={`fixed top-18 left-0 right-0 m-auto w-fit rounded-md backdrop-blur-sm px-6 py-3 text-md flex items-center gap-2 ${status === "success" ? "bg-green-700/80" : "bg-primary/80"
+            }`}
+        >
+          {status === "success" ? (
+            <>
+              <span className="mdi mdi-check-circle text-lg"></span>
+              Message sent successfully!
+            </>
+          ) : (
+            <>
+              <span className="mdi mdi-close-circle text-lg"></span>
+              Failed to send message
+            </>
+          )}
+        </div>
+      )}
     </>
   );
 }
