@@ -43,6 +43,15 @@ export default function Home() {
   // email js
   const formRef = useRef<HTMLFormElement>(null);
   const [status, setStatus] = useState<null | "success" | "error">(null);
+  const [loading, setLoading] = useState(false);
+
+  // optional: validation errors
+  const [errors, setErrors] = useState<{
+    name?: string;
+    email?: string;
+    message?: string;
+  }>({});
+
   useEffect(() => {
     if (!status) return;
 
@@ -53,10 +62,41 @@ export default function Home() {
     return () => clearTimeout(timer);
   }, [status]);
 
+  // simple validator
+  const validate = (form: HTMLFormElement) => {
+    const formData = new FormData(form);
+
+    const name = formData.get("name")?.toString().trim();
+    const email = formData.get("email")?.toString().trim();
+    const message = formData.get("message")?.toString().trim();
+
+    const newErrors: typeof errors = {};
+
+    if (!name) newErrors.name = "Name is required";
+
+    if (!email) {
+      newErrors.email = "Email is required";
+    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+      newErrors.email = "Invalid email format";
+    }
+
+    if (!message) newErrors.message = "Message is required";
+
+    setErrors(newErrors);
+
+    return Object.keys(newErrors).length === 0;
+  };
+
   const sendEmail = (e: React.FormEvent) => {
     e.preventDefault();
 
-    if (!formRef.current) return;
+    if (!formRef.current || loading) return;
+
+    // ✅ validate first
+    if (!validate(formRef.current)) return;
+
+    setLoading(true);
+    setStatus(null);
 
     emailjs
       .sendForm(
@@ -66,8 +106,14 @@ export default function Home() {
         "Yy4ay91jIRcPocH_y"
       )
       .then(
-        () => setStatus("success"),
-        () => setStatus("error")
+        () => {
+          setStatus("success");
+          setLoading(false);
+        },
+        () => {
+          setStatus("error");
+          setLoading(false);
+        }
       );
   };
 
@@ -503,10 +549,36 @@ export default function Home() {
                 <textarea id="message" name="message" placeholder="Tell me about your project" required
                   className="min-h-[120px] bg-secondary-2 border border-1 border-border focus:border-primary-dim outline-none px-4 py-3 transition-colors duration-200"></textarea>
               </div>
-              <button className="form-submit outline-none [clip-path:polygon(8px_0%,100%_0%,calc(100%_-_8px)_100%,0%_100%)] px-8 py-3 self-start bg-primary/80 text-foreground hover:bg-primary focus:bg-primary border-none font-bold tracking-widest uppercase cursor-pointer transition-colors duration-200" type="submit">Send Message ›</button>
+              {errors.name && <p className="text-red-500 text-sm">{errors.name}</p>}
+              {errors.email && <p className="text-red-500 text-sm">{errors.email}</p>}
+              {errors.message && <p className="text-red-500 text-sm">{errors.message}</p>}
+              <button
+                className={`
+    form-submit outline-none w-fit self-start inline-flex items-center justify-center
+    [clip-path:polygon(8px_0%,100%_0%,calc(100%_-_8px)_100%,0%_100%)]
+    px-8 py-3 bg-primary/80 text-foreground
+    hover:bg-primary focus:bg-primary border-none
+    font-bold tracking-widest uppercase cursor-pointer
+    transition-all duration-200 relative
+    ${loading ? "pointer-events-none" : ""}
+  `}
+                type="submit"
+                disabled={loading}
+              >
+                {/* text (keeps same width always) */}
+                <span className={loading ? "invisible" : "visible"}>
+                  Send Message ›
+                </span>
+
+                {/* spinner overlay (does NOT affect width) */}
+                {loading && (
+                  <span className="absolute inset-0 flex items-center justify-center">
+                    <span className="mdi mdi-loading mdi-spin text-xl"></span>
+                  </span>
+                )}
+              </button>
             </form>
             <div className="flex flex-col gap-8 justify-start items-start">
-
 
               <div className="flex gap-4">
                 <div className="w-12 h-12 flex justify-center items-center border border-primary-dim bg-primary-dim/20">
