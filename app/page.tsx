@@ -90,6 +90,7 @@ export default function Home() {
   const sendEmail = (e: React.FormEvent) => {
     e.preventDefault();
 
+
     if (!formRef.current || loading) return;
 
     // ✅ validate first
@@ -109,6 +110,10 @@ export default function Home() {
         () => {
           setStatus("success");
           setLoading(false);
+          formRef.current?.reset();
+          window.dataLayer.push({
+            event: 'form_success'
+          });
         },
         () => {
           setStatus("error");
