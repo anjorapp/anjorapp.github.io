@@ -30,6 +30,9 @@ const dmMono = DM_Mono({
 const year = new Date().getFullYear();
 
 export const metadata: Metadata = {
+  verification: {
+    google: "MjQ0eHATB29KoqP7jVZtTp4Nb_D4Z57SPY-PELeLjJI",
+  },
   title: {
     default: "Anjorapp",
     template: "%s | Anjorapp",
