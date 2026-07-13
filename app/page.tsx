@@ -111,9 +111,9 @@ export default function Home() {
           setStatus("success");
           setLoading(false);
           formRef.current?.reset();
-          window.dataLayer.push({
+          (window as any).dataLayer = (window as any).dataLayer || [];
+          (window as any).dataLayer.push({
             event: "form_success",
-            form_name: "contact_form",
           });
         },
         () => {
