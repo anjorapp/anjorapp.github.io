@@ -112,7 +112,8 @@ export default function Home() {
           setLoading(false);
           formRef.current?.reset();
           window.dataLayer.push({
-            event: 'form_success'
+            event: "form_success",
+            form_name: "contact_form",
           });
         },
         () => {
