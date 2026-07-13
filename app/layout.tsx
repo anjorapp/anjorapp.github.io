@@ -3,6 +3,7 @@ import { Bebas_Neue, Rajdhani, DM_Mono } from "next/font/google";
 import "./globals.css";
 import Nav from "./components/Nav";
 import Providers from "./providers";
+import Script from 'next/script';
 
 const bebasNeue = Bebas_Neue({
   weight: ["400"],
@@ -100,6 +101,20 @@ export default function RootLayout({
       lang="en"
       className={`${bebasNeue.variable} ${rajdhani.variable} ${dmMono.variable}`}
     >
+      <head>
+        <Script async src="https://www.googletagmanager.com/gtag/js?id=G-BWRTYR8SMV"></Script>
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-BWRTYR8SMV');
+          `}
+        </Script>
+      </head>
+
+
       <body className="min-h-full flex flex-col bg-background text-foreground">
         <Nav />
         <Providers>{children}</Providers>
