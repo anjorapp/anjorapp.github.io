@@ -31,7 +31,7 @@ const year = new Date().getFullYear();
 
 export const metadata: Metadata = {
   verification: {
-    google: "MjQ0eHATB29KoqP7jVZtTp4Nb_D4Z57SPY-PELeLjJI",
+    google: "7yQCQNJxsp7uy5PhNJ22K_igWEjF6eVMI3UzBPN5hfw",
   },
   title: {
     default: "Anjorapp",
@@ -115,7 +115,7 @@ export default function RootLayout({
             gtag('config', 'G-BWRTYR8SMV');
           `}
         </Script>
-        <meta name="google-site-verification" content="MjQ0eHATB29KoqP7jVZtTp4Nb_D4Z57SPY-PELeLjJI" />
+        <meta name="google-site-verification" content="7yQCQNJxsp7uy5PhNJ22K_igWEjF6eVMI3UzBPN5hfw" />
       </head>
 
 
