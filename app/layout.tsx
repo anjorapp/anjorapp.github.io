@@ -112,6 +112,7 @@ export default function RootLayout({
             gtag('config', 'G-BWRTYR8SMV');
           `}
         </Script>
+        <meta name="google-site-verification" content="MjQ0eHATB29KoqP7jVZtTp4Nb_D4Z57SPY-PELeLjJI" />
       </head>
 
 
