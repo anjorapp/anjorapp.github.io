@@ -436,7 +436,7 @@ export default function Home() {
             {projects.map((project, index) => (
               <div key={index} className="project flex items-end transition-colors duration-200 border-2 border-background hover:border-primary-dim" style={{ backgroundImage: `url('/img/${project.img}')` }}>
                 <div className="w-full text-center flex py-2 bg-primary-dim/80 hover:bg-primary-dim text-foreground transition-colors duration-200">
-                  <a href={project.url} className="w-full tracking-wider" target="_blank" rel="nofollow">
+                  <a href={project.url} className="w-full tracking-wider" target="_blank" rel="nofollow noreferrer">
                     Visit {project.title}
                   </a>
                 </div>
