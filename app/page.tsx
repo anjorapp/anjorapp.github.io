@@ -156,10 +156,16 @@ export default function Home() {
       url: 'https://www.openaccessbpo.com',
     },
 
+    // {
+    //   title: 'Connected Compass',
+    //   img: 'connectedcompass.png',
+    //   url: 'https://connectedcompass.com/',
+    // },
+
     {
-      title: 'Connected Compass',
-      img: 'connectedcompass.png',
-      url: 'https://connectedcompass.com/',
+      title: 'Sonnentag American Foundation',
+      img: 'sonnentag.png',
+      url: 'https://sonnentagamericanfoundation.org/',
     },
 
     {
